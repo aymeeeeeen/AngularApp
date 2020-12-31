@@ -1,0 +1,58 @@
+
+  <header class="section-header">
+    <section class="header-main border-bottom">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-sm-4 col-md-4 col-5"> <a href="#" class="brand-wrap" data-abc="true">
+                    <span class="logo">Web Application</span> </a> </div>
+                <div class="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
+                    <form action="#" class="search-wrap">
+                        <div class="input-group w-100"> 
+                            <input type="text" class="form-control search-form" style="width:55%;" placeholder="Search">
+                            <div class="input-group-append"> 
+                                <button class="btn btn-primary search-button" type="submit"> <i class="fa fa-search"></i> 
+                                </button> </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
+                    <div class="d-flex justify-content-end"> 
+                        <span class="vl"></span>
+                        <ul>
+                          <li *ngIf="!currentUser"class="nav-item">
+                            <a class="nav-link nav-user-img" routerLink="/login" data-toggle="modal" data-target="#login-modal" data-abc="true">
+                              <span class="login">LOGIN</span>
+                            </a>
+                          </li>
+                          <li *ngIf="currentUser"class="nav-item">
+                            <a class="nav-link nav-user-img" (click)="logout()" routerLink="/login" data-toggle="modal" data-target="#login-modal" data-abc="true">
+                              <span class="login">LOGOUT</span>
+                            </a>
+                          </li>
+                        </ul> 
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar navbar-expand-md navbar-main border-bottom">
+        <div class="container-fluid">
+            <form class="d-md-none my-2">
+                <div class="input-group"> <input type="search" name="search" class="form-control" placeholder="Search" required="">
+                    <div class="input-group-append"> 
+                        <button type="submit" class="btn btn-secondary"> <i class="fa fa-search"></i> 
+                        </button> 
+                    </div>
+                </div>
+            </form> <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#dropdown6" aria-expanded="false"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="navbar-collapse collapse" id="dropdown6" style="">
+                <ul *ngIf="currentUser" class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" routerLink="/users" data-abc="true">User</a> </li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="/product" data-abc="true">Products</a> </li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="/product" data-abc="true">Customers</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

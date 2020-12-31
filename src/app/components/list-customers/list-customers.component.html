@@ -1,0 +1,30 @@
+<div class="row my-3">
+    <div class="col-md-6">
+        <a>List Of Users</a>
+    </div>
+    <div class="col-md-6">
+        <button class="btn btn-primary">new</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6" *ngFor="let i of customers._embedded.customers">
+        <div class="card border-primary mb-3" >
+            <div class="card-header">Header</div>
+            <div class="card-body">
+           <ul  class="list-group list-group-flush">
+               <li class="list-group-item"> <strong>Id: </strong> {{i.id}}</li>
+               <li class="list-group-item"><strong>Name: </strong> {{i.name}}</li>
+               <li class="list-group-item"><strong>Email: </strong> {{i.email}}</li>
+               <li class="list-group-item text-center">
+                <button class="btn btn-primary mr-2">Edite</button>
+                <button class="btn btn-dark mr-2">Delete</button>
+               </li>
+
+
+           </ul>
+           
+           
+            </div>
+          </div>
+    </div>
+</div>
